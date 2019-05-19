@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="www.thymeleaf.org">
+
+<head>
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body background="/twitter.png">
+<div class="container" >
+<div class="card" >
+    <div class="card-header text-center bg-dark text-white">
+
+    <h3>Message Page</h3>
+        <a href="/"> To the list</a>
+</div>
+
+
+    <div class="card-body">
+    <div class="row">
+        <div class="col-sm-6">
+
+            <form action="#" method="post" th:action="@{/process}" th:object="${message}">
+                title:<input th:field="*{title}" type="text"/>
+                <span th:errors="*{title}"
+                      th:if="${#fields.hasErrors('title')}"></span><br/><br/>
+                Content:<textarea rows="3" th:field="*{content}"/>
+                <span th:errors="*{content}"
+                      th:if="${#fields.hasErrors('content')}"></span><br/><br/>
+                postedDate:<input th:field="*{postDate}" type="text"/>
+                <span th:errors="*{postDate}"
+                      th:if="${#fields.hasErrors('postDate')}"></span><br/><br/>
+                postedBy:<input th:field="*{postedBy}" type="text"/>
+                <span th:errors="*{postedBy}"
+                      th:if="${#fields.hasErrors('postedBy')}"></span><br/><br/>
+                <input type="submit" value="Submit"/>
+            </form>
+        </div>
+        <div class="col-sm-6">
+            <p>you have to be careful what you add in your message and uploading photos know days online bulling is becoming a global crises.
+            what ever you pst here you take the  </p>
+            <img src="http://boomerssocialmediatutor.com/wp-content/uploads/2015/08/twitter-montage-of-words.jpg" width="400" hight="500">
+        </div>
+    </div>
+    </div>
+
+    <div class="jumbotron jumbotron-fluid">
+        <p> this A plat form that help to socialize</p>
+    </div>
+
+
+    <div class="card-footer text-center bg-dark text-white">
+
+        <p>Posted by: Fikru Melese</p>
+        <p>Contact information: <a href="mailto:someone@example.com">
+            someone@example.com</a>.</p>
+    </div>
+
+</div>
+</div>
+<script crossorigin="anonymous" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+<script crossorigin="anonymous" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+<script crossorigin="anonymous" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
